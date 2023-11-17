@@ -1,9 +1,14 @@
 package com.example.DataBaseManager;
+import com.example.Product.Product;
+import com.example.User.User;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseManager {
     private Connection connection;
@@ -14,6 +19,21 @@ public class DatabaseManager {
 
     private void connect() {
         // Реализация подключения к базе данных
+    }
+
+    public User getUserByUsername(String username) {
+        // Реализация запроса в базу данных для получения данных пользователя по логину
+        // Вернуть объект User или null, если пользователь не найден
+        return null;
+    }
+
+    public void addUser(User user) {
+        // Реализация добавления пользователя в базу данных
+    }
+
+    public List<User> getAllUsers() {
+        // Реализация получения списка всех пользователей из базы данных
+        return new ArrayList<>();  // Замените на вашу реализацию
     }
 
     private void disconnect() {
@@ -53,4 +73,21 @@ public class DatabaseManager {
         // Реализация метода удаления пользователя из базы данных
         return false;
     }
+    public List<Product> getAllProducts() {
+        // Реализация получения всех продуктов из базы данных
+        return new ArrayList<>(); // Замените этот код на реальную логику получения данных
+    }
+
+    public int getMaxProductId() {
+
+        return 0;
+    }
+    public void addProduct(Product product) {
+        // Реализация добавления нового продукта в базу данных
+    }
+
+    public void editProduct(int productId, Product updatedProduct) {
+        // Реализация редактирования продукта в базе данных
+    }
+
 }

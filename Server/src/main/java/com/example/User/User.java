@@ -5,15 +5,24 @@ public class User {
     private String username;
     private String password;
     private Role role;
+    private boolean blocked;
 
     private boolean isAdmin;
 
-    public User(int userID, String username, String password, Role role, boolean isAdmin) {
-        this.userID = userID;
+    public User( String username, String password, Role role, boolean blocked) {
         this.username = username;
         this.password = password;
         this.role = role;
         this.isAdmin = isAdmin;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    // Добавьте метод setter, если вам нужно изменять статус блокировки
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
     }
 
     public boolean isAdmin() {
@@ -44,3 +53,4 @@ public class User {
         this.role = role;
     }
 }
+

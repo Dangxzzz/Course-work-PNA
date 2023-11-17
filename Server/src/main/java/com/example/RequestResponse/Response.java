@@ -1,12 +1,14 @@
 package com.example.RequestResponse;
 
+import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 
-public class Response {
+public class Response implements Serializable {
     private ResponseStatus status;
-    private Map<String, String> data;
+    private Object data;
 
-    public Response(ResponseStatus status, Map<String, String> data) {
+    public Response(ResponseStatus status, Object data) {
         this.status = status;
         this.data = data;
     }
@@ -15,7 +17,7 @@ public class Response {
         return status;
     }
 
-    public Map<String, String> getData() {
+    public Object getData() {
         return data;
     }
 }

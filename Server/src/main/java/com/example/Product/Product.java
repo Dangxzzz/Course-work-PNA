@@ -4,11 +4,24 @@ public class Product {
     private int productID;
     private String productName;
     private int stockQuantity;
+    private int supplierID;
 
-    public Product(int productID, String productName, int stockQuantity) {
-        this.productID = productID;
+    public Product(int productId, String productName, int stockQuantity, int supplierId) {
+        this.productID = productId;
         this.productName = productName;
         this.stockQuantity = stockQuantity;
+        this.supplierID = supplierId;
+    }
+    public Product(String productName, int stockQuantity, int supplierId) {
+        this.productName = productName;
+        this.stockQuantity = stockQuantity;
+        this.supplierID = supplierId;
+    }
+
+    // Добавим геттеры
+
+    public int getSupplierID() {
+        return supplierID;
     }
 
     public int getProductID() {

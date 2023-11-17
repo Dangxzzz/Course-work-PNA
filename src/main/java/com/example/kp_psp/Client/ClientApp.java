@@ -10,7 +10,6 @@ public class ClientApp {
         ClientController clientController = new ClientController();
         clientController.startClient();
 
-        // Добавьте код для запуска JavaFX интерфейса пользователя
         launch(ClientUIApp.class, args);
     }
 }
